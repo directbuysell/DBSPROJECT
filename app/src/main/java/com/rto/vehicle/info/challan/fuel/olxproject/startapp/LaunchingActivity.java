@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
 import com.rto.vehicle.info.challan.fuel.olxproject.comman.SharePrefs;
@@ -17,6 +18,9 @@ import com.rto.vehicle.info.challan.fuel.olxproject.comman.SharePrefs;
 public class LaunchingActivity extends AppCompatActivity {
 
     Activity activity;
+    int status = 0;
+    Handler handler = new Handler();
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,36 @@ public class LaunchingActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_launching);
         activity = LaunchingActivity.this;
-        NextScreen(2500);
+        progressBar = findViewById(R.id.progressBar);
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (status < 100) {
+
+                    status += 1;
+
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            progressBar.setProgress(status);
+                            if (status == 100) {
+                                NextScreen(2500);
+
+                            }
+                        }
+                    });
+                }
+            }
+        }).start();
 
     }
 

@@ -106,6 +106,30 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="5dp"
                         android:fontFamily="@font/poppins_bold"
+                        android:text="Mobile Number"
+                        android:textColor="@color/text_gray" />
+
+                    <EditText
+                        android:id="@+id/etmobile"
+                        style="@style/EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="Password"
                         android:textColor="@color/text_gray" />
 

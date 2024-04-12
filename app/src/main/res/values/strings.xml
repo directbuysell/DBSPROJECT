@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">OLXPROJECT</string>
+    <string name="app_name">DBSPROJECT</string>
 
     <string name="strPrivacyContactUs">By registration i agree to this <a href="https://financecapitalsupport.blogspot.com/2023/04/privacy-policy-of-true-loan-fast-cash.html">Terms &amp; Conditions</a> AND <a href="https://financecapitalsupport.blogspot.com/2023/04/privacy-policy-of-true-loan-fast-cash.html">Privacy Policy</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_desc">Desc</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
 
 
 </resources>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".comman.GlobalAcesss"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,13 +14,28 @@
         android:theme="@style/Theme.OLXPROJECT"
         tools:targetApi="31">
         <activity
+            android:name=".Seller.EnterSellinPrice_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller.UploadGuide_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller.Uploadcarimage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Buyer.PhotosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Seller.CitylistActivity"
+            android:exported="false" />
+        <activity
             android:name=".Buyer.CarDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.Carinfo_activity"
+            android:name=".Seller.Carinfo_activity"
             android:exported="false" />
         <activity
-            android:name=".activity.SellCarActivity"
+            android:name=".Seller.SellCarActivity"
             android:exported="false" />
         <activity
             android:name=".startapp.ResetpasswordActivity"

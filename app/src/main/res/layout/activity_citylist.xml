@@ -1,9 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CitylistActivity">
+    android:orientation="vertical"
+    tools:context=".Seller.CitylistActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/lined"
+                    android:orientation="horizontal"
+                    android:paddingVertical="1.5dp"
+                    android:paddingTop="1.5dp"
+                    android:paddingEnd="1.5dp"
+                    android:paddingRight="1.5dp"
+                    android:paddingBottom="1.5dp"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/etSearchKeyword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.88"
+                        android:background="@null"
+                        android:fontFamily="@font/poppins_medium"
+                        android:ems="10"
+                        android:hint="select city Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="#8a9099"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.12"
+                        android:background="@drawable/exit_icon_bg"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/ic_searchs"
+                            app:tint="@color/purple_200"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <include
+                    android:id="@+id/errorContainer"
+                    layout="@layout/error_contextual"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlbanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.rto.vehicle.info.challan.fuel.olxproject.activity;
+package com.rto.vehicle.info.challan.fuel.olxproject.Seller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,6 @@ import android.widget.EditText;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
 import com.rto.vehicle.info.challan.fuel.olxproject.comman.GlobalAcesss;
-import com.rto.vehicle.info.challan.fuel.olxproject.comman.Methods;
 
 public class SellCarActivity extends AppCompatActivity {
     Activity activity;
@@ -37,10 +36,14 @@ public class SellCarActivity extends AppCompatActivity {
                 if (trim.isEmpty()) {
                     etcarnumber.setError("Please enter Income Tax number");
                     etcarnumber.requestFocus();
-                } else if (!trim.matches(Methods.carnoPattern)) {
-                    etcarnumber.setError("Please enter valid pan number");
-                    etcarnumber.requestFocus();
-                }else {
+                }
+
+//                else if (!trim.matches(Methods.carnoPattern)) {
+//                    etcarnumber.setError("Please enter valid pan number");
+//                    etcarnumber.requestFocus();
+//                }
+
+                else {
                     startActivity(new Intent(activity, Carinfo_activity.class));
                 }
 

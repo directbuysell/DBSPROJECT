@@ -13,4 +13,9 @@
     <dimen name="_15dp">15dp</dimen>
     <dimen name="_10ssp">12dp</dimen>
     <dimen name="_7sdp">7dp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_40sdp">40dp</dimen>
+    <dimen name="_25sdp">25dp</dimen>
+    <dimen name="_55sdp">55dp</dimen>
+    <dimen name="_42sdp">42dp</dimen>
 </resources>

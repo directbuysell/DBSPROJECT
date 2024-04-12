@@ -95,6 +95,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_forget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -105,7 +106,7 @@
             android:textSize="13dp" />
 
         <Button
-            android:id="@+id/btnNext"
+            android:id="@+id/btnlogin"
             style="@style/Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,112 +143,112 @@
 
         </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_marginTop="25dp"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="horizontal">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="3dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:background="@color/line" />-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@color/line" />
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppins_medium"-->
-<!--                android:gravity="center|end"-->
-<!--                android:layout_marginHorizontal="15dp"-->
-<!--                android:text="Or sign up with"-->
-<!--                android:textColor="@color/purple_200"-->
-<!--                android:textSize="13dp" />-->
-
-
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="3dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:background="@color/line" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center|end"
+                android:layout_marginHorizontal="15dp"
+                android:text="Or sign up with"
+                android:textColor="@color/purple_200"
+                android:textSize="13dp" />
 
 
-<!--        </LinearLayout>-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@color/line" />
+
+
+        </LinearLayout>
 
 
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="55dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:orientation="horizontal">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/ll_mobilelogin"-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginRight="@dimen/_5sdp"-->
-<!--                android:gravity="center"-->
-<!--                android:background="@drawable/ic_box">-->
+            <LinearLayout
+                android:id="@+id/ll_mobilelogin"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="center"
+                android:background="@drawable/ic_box">
 
-<!--                <ImageView-->
-<!--                    android:layout_width="30dp"-->
-<!--                    android:layout_height="30dp"-->
-<!--                    android:src="@drawable/icon_mobile">-->
-
-
-<!--                </ImageView>-->
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_mobile">
 
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppins_bold"-->
-<!--                    android:gravity="center|end"-->
-<!--                    android:text="Mobile Login "-->
-<!--                    android:layout_marginLeft="8dp"-->
-<!--                    android:textColor="@color/purple_200"-->
-<!--                    android:textSize="13dp" />-->
+                </ImageView>
 
 
-<!--            </LinearLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center|end"
+                    android:text="Mobile Login "
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/purple_200"
+                    android:textSize="13dp" />
 
 
-<!--            <LinearLayout-->
-<!--                android:id="@+id/ll_googlelogin"-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_marginLeft="@dimen/_5sdp"-->
-<!--                android:background="@drawable/ic_box">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="25dp"-->
-<!--                    android:layout_height="25dp"-->
-<!--                    android:src="@drawable/icon_search">-->
+            </LinearLayout>
 
 
-<!--                </ImageView>-->
+            <LinearLayout
+                android:id="@+id/ll_googlelogin"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@drawable/ic_box">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_search">
 
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppins_bold"-->
-<!--                    android:gravity="center|end"-->
-<!--                    android:text="Google Login "-->
-<!--                    android:layout_marginLeft="8dp"-->
-<!--                    android:textColor="@color/purple_200"-->
-<!--                    android:textSize="13dp" />-->
+                </ImageView>
 
 
-<!--            </LinearLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center|end"
+                    android:text="Google Login "
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/purple_200"
+                    android:textSize="13dp" />
 
 
-<!--        </LinearLayout>-->
+            </LinearLayout>
+
+
+        </LinearLayout>
 
 
         <TextView

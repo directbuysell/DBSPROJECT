@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -33,19 +34,20 @@ import com.rto.vehicle.info.challan.fuel.olxproject.comman.SharePrefs;
 
 public class LoginActivity extends AppCompatActivity {
     Activity activity;
-    LinearLayout ll_mobilelogin,ll_googlelogin;
+    LinearLayout ll_mobilelogin, ll_googlelogin;
 
     EditText et_mobile;
-    TextView btn_sendotp,btn_otp;
-    ProgressBar pb_main,pb2_main;
+    TextView btn_sendotp, btn_otp;
+    ProgressBar pb_main, pb2_main;
     PinView otpView;
     String otpss;
     Intent intent;
     LinearLayout ll_newaccount;
-
+    TextView tv_forget;
     private GoogleSignInClient googleSignInClient;
     private static final int RC_SIGN_IN = 007;
     private GoogleApiClient mGoogleApiClient;
+    Button btnlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +58,29 @@ public class LoginActivity extends AppCompatActivity {
         ll_mobilelogin = (LinearLayout) findViewById(R.id.ll_mobilelogin);
         ll_googlelogin = (LinearLayout) findViewById(R.id.ll_googlelogin);
         ll_newaccount = (LinearLayout) findViewById(R.id.ll_newaccount);
+        tv_forget = (TextView)findViewById(R.id.tv_forget);
+        btnlogin = (Button)findViewById(R.id.btnlogin);
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(activity, HomeActivity.class));
+            }
+        });
+
+        tv_forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(activity, ResetpasswordActivity.class));
+            }
+        });
 
 
         ll_newaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(activity,NewAccount_Activity.class));
+
             }
         });
-
 
 
         ll_mobilelogin.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +138,6 @@ public class LoginActivity extends AppCompatActivity {
 
                                         }
                                     }, 2500);
-
 
 
                                     btn_sendotp.setVisibility(View.GONE);
@@ -201,11 +216,10 @@ public class LoginActivity extends AppCompatActivity {
 
                             new Handler().postDelayed(new Runnable() {
                                 public void run() {
-                                   startActivity(new Intent(activity, HomeActivity.class));
+                                    startActivity(new Intent(activity, HomeActivity.class));
 
                                 }
                             }, 2500);
-
 
 
                             btn_sendotp.setVisibility(View.GONE);

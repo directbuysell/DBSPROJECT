@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Seller.UploadGuide_Activity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Good Image"
+                android:textColor="@color/purple_200"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Hight traffic  ●  High chances of sales ● Better visibility"
+                android:textColor="@color/text_color"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/tips_1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Bad Image"
+                android:textColor="@color/purple_200"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Low traffic  ●  Low chances of sales ● Low ranking"
+                android:textColor="@color/text_color"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/tips_2" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

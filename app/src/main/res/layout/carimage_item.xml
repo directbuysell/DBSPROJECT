@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <com.rto.vehicle.info.challan.fuel.olxproject.comman.AspectRatioLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:padding="5dp"
+        app:arl_heightRatio="9"
+        app:arl_widthRatio="16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_upload" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Show Car All Images"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+    </com.rto.vehicle.info.challan.fuel.olxproject.comman.AspectRatioLayout>
+
+</RelativeLayout>
