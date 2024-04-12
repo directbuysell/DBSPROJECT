@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.HomeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/ic_paragraph"
+            app:tint="@color/purple_200" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_16dp"
+            android:gravity="center|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_map">
+
+
+            </ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center|end"
+                android:text="surat "
+                android:textColor="@color/text_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_icon_fav_unselect"
+                app:tint="@color/purple_200" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:src="@drawable/icon_man" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/lined"
+                android:orientation="horizontal"
+                android:paddingVertical="1.5dp"
+                android:paddingTop="1.5dp"
+                android:paddingEnd="1.5dp"
+                android:paddingRight="1.5dp"
+                android:paddingBottom="1.5dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/etSearchKeyword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.88"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="search cars"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#8a9099"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.12"
+                    android:background="@drawable/exit_icon_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_searchs"
+                        app:tint="#FFF" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/_16dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                android:layout_marginHorizontal="@dimen/_16dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="2"
+                app:sliderStartAutoCycle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_sell"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_box"
+                        android:backgroundTint="#0078FF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Sell car"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="From your home"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/home_sell_car">
+
+
+                        </ImageView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_box"
+                        android:backgroundTint="#FE6E00"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Buy Used car"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Pre-owned cars for sale"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/home_used_cars">
+
+
+                        </ImageView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="170dp"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:orientation="horizontal">-->
+
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_marginRight="@dimen/_5sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/ic_box"-->
+                <!--                        android:backgroundTint="#2F6569"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="vertical">-->
+
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginLeft="8dp"-->
+                <!--                            android:fontFamily="@font/poppins_bold"-->
+                <!--                            android:text="New Cars"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="16dp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginLeft="8dp"-->
+                <!--                            android:fontFamily="@font/poppins_medium"-->
+                <!--                            android:text="with exciting offers"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="12dp" />-->
+
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="80dp"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:src="@drawable/home_new_cars">-->
+
+
+                <!--                        </ImageView>-->
+
+
+                <!--                    </LinearLayout>-->
+
+                <!--                   -->
+
+
+                <!--                    <LinearLayout-->
+
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_marginLeft="@dimen/_5sdp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:background="@drawable/ic_box"-->
+                <!--                        android:backgroundTint="#44b1cf"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="vertical">-->
+
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginLeft="8dp"-->
+                <!--                            android:fontFamily="@font/poppins_bold"-->
+                <!--                            android:text="News"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="16dp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginLeft="8dp"-->
+                <!--                            android:fontFamily="@font/poppins_medium"-->
+                <!--                            android:text="to keep you update"-->
+                <!--                            android:textColor="@color/white"-->
+                <!--                            android:textSize="12dp" />-->
+
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="80dp"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:src="@drawable/home_news">-->
+
+
+                <!--                        </ImageView>-->
+
+
+                <!--                    </LinearLayout>-->
+
+
+                <!--                </LinearLayout>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

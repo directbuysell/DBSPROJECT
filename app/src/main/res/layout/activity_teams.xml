@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_16dp"
+    tools:context=".startapp.TeamsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center|start"
+                android:text="Termes of Use"
+                android:textColor="@color/purple_200"
+                android:textSize="30dp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_14sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_14sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/native_space_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true" />
+
+                        <FrameLayout
+                            android:id="@+id/native_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="1. Privacy policy"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/downtext1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:animateLayoutChanges="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:text="RTO Vehicle Information during the operation of the app is covered by the Privacy Policy. As a leader in the industry, RTO Vehicle Information holds itself to very high standards, which are reflected in our Privacy Policy."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="2. User information Collection"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/downtext2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:text="A promise that the service will be secure and we don&apos;t collect any kind of personal data &amp; sensitive information from users."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="3. Action on promotional activity"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/downtext3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:text="RTO vehicle information reserves the right to provide push notifications with marketing material that will be linked to or associated with our app. However, customers will have the option to opt out of receiving these push alerts. RTO Vehicle Info App should not be held liable for sending these marketing and promotional push notifications."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="4. Reporting violations"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/downtext4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:text="The user acknowledges and agrees that RTO Vehicle Information App shall not be responsible for any direct or indirect damages of any kind resulting from the use or inability to use the app, or from the links&apos; contents. By using this App, the User exclusively represents and agrees that the use of the App and any related issues shall be strictly governed by the laws in force in India."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="5. Changes to this Privacy Policy"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/downtext5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:text="We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this Screen."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_cancel"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center"
+            android:background="@drawable/ic_box">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center|end"
+                android:text="cancel "
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/purple_200"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_accept"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:backgroundTint="@color/purple_200"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:background="@drawable/ic_box">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center|end"
+                android:text="Accept all"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
