@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                 Methods.bottomSheetDialog(activity, R.layout.bottom_firstnumber, new Methods.BottomSheetDialogListener() {
                     @Override
                     public void onCreated(BottomSheetDialog bottomSheetDialog) {
-                        bottomSheetDialog.setCancelable(false);
+                        bottomSheetDialog.setCancelable(true);
                         et_mobile = (EditText) bottomSheetDialog.findViewById(R.id.et_mobile);
                         btn_sendotp = (TextView) bottomSheetDialog.findViewById(R.id.btn_sendotp);
                         pb_main = (ProgressBar) bottomSheetDialog.findViewById(R.id.pb_main);
