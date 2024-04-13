@@ -12,6 +12,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.multidex.MultiDexApplication;
 
 
+import com.rto.vehicle.info.challan.fuel.olxproject.API.APIClient;
+import com.rto.vehicle.info.challan.fuel.olxproject.API.APIInterface;
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
 
 import java.text.NumberFormat;
@@ -21,7 +23,7 @@ import java.util.Map;
 public class GlobalAcesss extends MultiDexApplication {
 
     public static GlobalAcesss context;
-
+    public static APIInterface apiInterface;
 
 
 
@@ -29,6 +31,8 @@ public class GlobalAcesss extends MultiDexApplication {
         super.onCreate();
         context = this;
         SharePrefs.init();
+
+        apiInterface = APIClient.getClient().create(APIInterface.class);
 
 
 

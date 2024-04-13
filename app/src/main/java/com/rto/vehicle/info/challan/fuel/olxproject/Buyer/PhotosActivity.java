@@ -20,7 +20,7 @@ public class PhotosActivity extends AppCompatActivity {
     RecyclerView rv_photo;
     CarPhotoAdapter mAdapter;
     int[] images;
-    TextView tv_tips;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class PhotosActivity extends AppCompatActivity {
         GlobalAcesss.toolbar(activity, "Used Car");
 
         rv_photo = (RecyclerView) findViewById(R.id.rv_photo);
-        tv_tips = (TextView)findViewById(R.id.tv_tips);
+
         Intent intent = getIntent();
         if (intent != null) {
             images = intent.getIntArrayExtra("imageArray");
@@ -44,12 +44,7 @@ public class PhotosActivity extends AppCompatActivity {
         }
 
 
-        tv_tips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(activity, UploadGuide_Activity.class));
-            }
-        });
+
 
 
     }

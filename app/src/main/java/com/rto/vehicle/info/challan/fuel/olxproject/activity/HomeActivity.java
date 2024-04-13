@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.Buyer.CarDetailsActivity;
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
+import com.rto.vehicle.info.challan.fuel.olxproject.Seller.CitylistActivity;
 import com.rto.vehicle.info.challan.fuel.olxproject.Seller.SellCarActivity;
 import com.rto.vehicle.info.challan.fuel.olxproject.adpter.SliderAdapter;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
@@ -43,7 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         ll_sell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(activity, SellCarActivity.class));
+
+                startActivity(new Intent(activity, CitylistActivity.class));
             }
         });
 
