@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
 import com.rto.vehicle.info.challan.fuel.olxproject.Seller.Pincodelist_Activity;
+import com.rto.vehicle.info.challan.fuel.olxproject.comman.SharePrefs;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.CityModel;
 
 import java.util.List;
@@ -48,7 +49,12 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
         holder.ll_mainlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.startActivity(new Intent(activity, Pincodelist_Activity.class).putExtra("cityid",city.getCityId()));
+                SharePrefs.editor("cityname",city.getCityName());
+                SharePrefs.editor("Cityid",city.getCityId());
+
+                Intent intent = new Intent(activity, Pincodelist_Activity.class);
+                activity.startActivity(intent);
+                
             }
         });
 

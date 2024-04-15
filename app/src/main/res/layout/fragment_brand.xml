@@ -29,7 +29,6 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/lined"
             android:orientation="horizontal"
-
             android:paddingVertical="1.5dp"
             android:paddingTop="1.5dp"
             android:paddingEnd="1.5dp"
@@ -73,10 +72,39 @@
         </LinearLayout>
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Popular car brand"
+            android:textColor="@color/purple_200"
+            android:textSize="@dimen/_16dp" />
+
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_brand"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp" />
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_16dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:fontFamily="@font/poppins_bold"-->
+<!--            android:text="Other car brand"-->
+<!--            android:textColor="@color/purple_200"-->
+<!--            android:textSize="@dimen/_16dp" />-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rv_other"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="16dp" />-->
 
 
     </LinearLayout>

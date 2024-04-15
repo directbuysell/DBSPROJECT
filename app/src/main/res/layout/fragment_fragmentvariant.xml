@@ -20,6 +20,77 @@
             android:text="Select Variant"
             android:textColor="@color/purple_200"
             android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Registration Version"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spnr3version"
+                style="@style/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="2dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Fule Type"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spnr3fuletype"
+                style="@style/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="2dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Car Colour"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spnr3colour"
+                style="@style/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="2dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </FrameLayout>

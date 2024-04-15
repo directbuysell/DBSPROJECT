@@ -20,6 +20,62 @@
             android:text="Select your model"
             android:textColor="@color/purple_200"
             android:textSize="17dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/lined"
+            android:orientation="horizontal"
+
+            android:paddingVertical="1.5dp"
+            android:paddingTop="1.5dp"
+            android:paddingEnd="1.5dp"
+            android:paddingRight="1.5dp"
+            android:paddingBottom="1.5dp"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/et_modelKeyword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.88"
+                android:background="@null"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="search model"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="#8a9099"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.12"
+                android:background="@drawable/exit_icon_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_searchs"
+                    android:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_model"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/_10sdp" />
     </LinearLayout>
+
 
 </FrameLayout>

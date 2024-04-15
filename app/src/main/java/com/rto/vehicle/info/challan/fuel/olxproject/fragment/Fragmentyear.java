@@ -1,14 +1,42 @@
 package com.rto.vehicle.info.challan.fuel.olxproject.fragment;
 
+import static android.content.ContentValues.TAG;
+import static com.rto.vehicle.info.challan.fuel.olxproject.comman.GlobalAcesss.apiInterface;
+
+import static java.lang.Integer.parseInt;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
+import com.rto.vehicle.info.challan.fuel.olxproject.adpter.CityPincodeAdapter;
+import com.rto.vehicle.info.challan.fuel.olxproject.comman.Methods;
+import com.rto.vehicle.info.challan.fuel.olxproject.comman.SharePrefs;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.MonthsModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.PincodeModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.YearModel;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,28 +45,20 @@ import com.rto.vehicle.info.challan.fuel.olxproject.R;
  */
 public class Fragmentyear extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Spinner spnr1styera, spnr2stmonth;
 
     public Fragmentyear() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragmentyear.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static Fragmentyear newInstance(String param1, String param2) {
         Fragmentyear fragment = new Fragmentyear();
         Bundle args = new Bundle();
@@ -60,7 +80,139 @@ public class Fragmentyear extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.fragment_fragmentyear, container, false);
+
+        spnr1styera = (Spinner) rootView.findViewById(R.id.spnr1styera);
+        spnr2stmonth = (Spinner) rootView.findViewById(R.id.spnr2stmonth);
+
+        searchRegistrationyear();
+        searchRegistrationMonths();
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragmentyear, container, false);
+        return rootView;
+    }
+
+
+    private void searchRegistrationyear() {
+        Methods.progressDialogShow(getActivity());
+        Call<YearModel> call = apiInterface.registrationyear();
+        call.enqueue(new Callback<YearModel>() {
+            @Override
+            public void onResponse(Call<YearModel> call, Response<YearModel> response) {
+                if (response.isSuccessful()) {
+                    YearModel cityModel = response.body();
+
+                    Log.e("======@@City", "" + cityModel);
+
+                    if (cityModel != null && cityModel.getData() != null) {
+
+
+                        ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), R.layout.item_year, R.id.tv_year,
+                                cityModel.getData()) {
+                            @Override
+                            public View getDropDownView(int position, View convertView, ViewGroup parent) {
+                                View view = super.getDropDownView(position, convertView, parent);
+
+                                TextView text = view.findViewById(R.id.tv_year);
+
+                                return view;
+                            }
+                        };
+                        spnr1styera.setAdapter((SpinnerAdapter) arrayAdapter);
+                        Methods.progressDialogDismiss();
+
+                        spnr1styera.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                                // Display a Toast with the selected item
+                                String selectedItem = parentView.getItemAtPosition(position).toString();
+                                SharePrefs.editor("Regyear",parseInt(selectedItem));
+
+
+                                Toast.makeText(getActivity(), "Selected item: " + parseInt(selectedItem), Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parentView) {
+                                // Do nothing if nothing is selected
+                            }
+                        });
+
+
+                    }
+                } else {
+                    Log.e(TAG, "Failed to retrieve cities: " + response.message());
+                    Methods.progressDialogDismiss();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<YearModel> call, Throwable t) {
+                Log.e(TAG, "Error fetching cities: " + t.getMessage());
+            }
+        });
+    }
+
+
+    private void searchRegistrationMonths() {
+        Methods.progressDialogShow(getActivity());
+        Call<MonthsModel> call = apiInterface.registrationmonths();
+        call.enqueue(new Callback<MonthsModel>() {
+            @Override
+            public void onResponse(Call<MonthsModel> call, Response<MonthsModel> response) {
+                if (response.isSuccessful()) {
+                    MonthsModel monthsModel = response.body();
+
+                    Log.e("======@@City", "" + monthsModel);
+
+                    if (monthsModel != null && monthsModel.getData() != null) {
+
+
+                        ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), R.layout.item_year, R.id.tv_year,
+                                monthsModel.getData()) {
+                            @Override
+                            public View getDropDownView(int position, View convertView, ViewGroup parent) {
+                                View view = super.getDropDownView(position, convertView, parent);
+
+                                TextView text = view.findViewById(R.id.tv_year);
+
+                                return view;
+                            }
+                        };
+                        spnr2stmonth.setAdapter((SpinnerAdapter) arrayAdapter);
+                        Methods.progressDialogDismiss();
+
+                        spnr2stmonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                                // Display a Toast with the selected item
+                                String selectedItem = parentView.getItemAtPosition(position).toString();
+                                SharePrefs.editor("RegMonths",selectedItem);
+
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> parentView) {
+                                // Do nothing if nothing is selected
+                            }
+                        });
+
+
+                    }
+                } else {
+                    Log.e(TAG, "Failed to retrieve cities: " + response.message());
+                    Methods.progressDialogDismiss();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MonthsModel> call, Throwable t) {
+                Log.e(TAG, "Error fetching cities: " + t.getMessage());
+            }
+        });
     }
 }

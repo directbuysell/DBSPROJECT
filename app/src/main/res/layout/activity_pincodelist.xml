@@ -8,11 +8,7 @@
     tools:context=".Seller.Pincodelist_Activity">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        android:scrollbars="none">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,7 +61,7 @@
                     android:weightSum="1">
 
                     <EditText
-                        android:id="@+id/etSearchKeyword"
+                        android:id="@+id/etpincodeKeyword"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.88"
@@ -100,34 +96,10 @@
                 </LinearLayout>
 
 
-                <include
-                    android:id="@+id/errorContainer"
-                    layout="@layout/error_contextual"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:visibility="gone" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="📍 User current location"
-                        android:textColor="@color/blue"
-                        android:textSize="13dp" />
-                </LinearLayout>
-
-
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_citylist"
@@ -138,6 +110,6 @@
 
 
         </LinearLayout>
-    </ScrollView>
+
 
 </LinearLayout>

@@ -59,6 +59,38 @@ public class SharePrefs {
     }
 
 
+    public static String getCityName() {
+        return sharedPreferences.getString("cityname", "");
+    }
+
+    public static String getCitypincode() {
+        return sharedPreferences.getString("cityPincode", "");
+    }
+
+    public static int getCityid() {
+        return sharedPreferences.getInt("Cityid", 1);
+    }
+
+
+    public static int getRegistrationyear() {
+        return sharedPreferences.getInt("Regyear", 2024);
+    }
+
+
+    public static int getcarbrand() {
+        return sharedPreferences.getInt("carbrand", 1);
+    }
+
+    public static int getcarModel_ID() {
+        return sharedPreferences.getInt("carmodel_ID", 1);
+    }
+
+    public static String getRegistrationMonths() {
+        return sharedPreferences.getString("RegMonths", "Jan");
+    }
+
+
+
     public static String getMemberName() {
         return sharedPreferences.getString("memberName", "");
     }

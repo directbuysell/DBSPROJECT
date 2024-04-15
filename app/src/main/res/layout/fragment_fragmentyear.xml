@@ -7,19 +7,86 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/_16dp"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Select the registration year"
+                android:textColor="@color/purple_200"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Your car Make Year"
+                android:textColor="@color/text_color"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_marginTop="@dimen/_16dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Select the registration year"
-            android:textColor="@color/purple_200"
-            android:textSize="17dp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Registration Year"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spnr1styera"
+                style="@style/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="2dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Registration Months"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/spnr2stmonth"
+                style="@style/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:padding="2dp" />
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
 
 </FrameLayout>

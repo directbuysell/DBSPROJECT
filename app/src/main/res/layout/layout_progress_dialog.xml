@@ -12,11 +12,13 @@
         android:background="#20000000" />
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@drawable/ic_box">
+        android:background="@drawable/ic_box"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <com.airbnb.lottie.LottieAnimationView
@@ -30,7 +32,20 @@
             android:layout_marginBottom="@dimen/_15dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/download" />
+            app:lottie_rawRes="@raw/carloder" />
 
-    </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Loding Data.."
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textColor="@color/text_color"
+            android:textSize="13dp" />
+
+    </LinearLayout>
 </RelativeLayout>

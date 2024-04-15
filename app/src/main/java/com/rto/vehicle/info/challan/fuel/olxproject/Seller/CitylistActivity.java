@@ -17,6 +17,7 @@ import android.widget.EditText;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.R;
 import com.rto.vehicle.info.challan.fuel.olxproject.adpter.CityAdapter;
+import com.rto.vehicle.info.challan.fuel.olxproject.comman.Methods;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.CityModel;
 
 import java.util.ArrayList;
@@ -68,7 +69,7 @@ public class CitylistActivity extends AppCompatActivity {
     }
 
     private void searchCities(String query) {
-
+//        Methods.progressDialogShow(activity);
         Call<CityModel> call = apiInterface.searchCities(query);
         call.enqueue(new Callback<CityModel>() {
             @Override
@@ -86,17 +87,20 @@ public class CitylistActivity extends AppCompatActivity {
                         for (CityModel.DataItem dataItem : dataItems) {
                             Log.e("======@@City3",""+dataItems);
                             cities.add(new CityModel.DataItem(dataItem.getCityId(), dataItem.getCityName(), dataItem.getStateName()));
+                            Methods.progressDialogDismiss();
                         }
                         adapter.updateData(cities);
                     }
                 } else {
                     Log.e(TAG, "Failed to retrieve cities: " + response.message());
+                    Methods.progressDialogDismiss();
                 }
             }
 
             @Override
             public void onFailure(Call<CityModel> call, Throwable t) {
                 Log.e(TAG, "Error fetching cities: " + t.getMessage());
+                Methods.progressDialogDismiss();
             }
         });
     }

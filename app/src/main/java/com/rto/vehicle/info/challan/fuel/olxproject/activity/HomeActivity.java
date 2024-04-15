@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(activity, CitylistActivity.class));
+                startActivity(new Intent(activity, SellCarActivity.class));
             }
         });
 
