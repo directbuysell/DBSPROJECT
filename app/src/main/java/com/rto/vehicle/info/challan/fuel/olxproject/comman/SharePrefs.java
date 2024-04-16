@@ -18,6 +18,12 @@ public class SharePrefs {
         editor = sharedPreferences2.edit();
     }
 
+    public static void update() {
+        sharedPreferences = GlobalAcesss.getContext().getSharedPreferences(
+                "olx", 0);
+    }
+
+
     public static void editor(String str, String str2) {
         editor.putString(str, str2);
         editor.apply();
@@ -85,67 +91,38 @@ public class SharePrefs {
         return sharedPreferences.getInt("carmodel_ID", 1);
     }
 
+    public static int getvaeiantID() {
+        return sharedPreferences.getInt("vaeiantID", 1);
+    }
+
     public static String getRegistrationMonths() {
         return sharedPreferences.getString("RegMonths", "Jan");
     }
 
-
-
-    public static String getMemberName() {
-        return sharedPreferences.getString("memberName", "");
+    public static String getCarvaeiant() {
+        return sharedPreferences.getString("Carvaeiant", "");
     }
 
-    public static String getTotalPF() {
-        return sharedPreferences.getString("totalPf", "");
+    public static String getfuletype() {
+        return sharedPreferences.getString("FuleType", "");
     }
 
-    public static String getEmployerContribution() {
-        return sharedPreferences.getString("employerContribution", "");
+    public static String getTransmission() {
+        return sharedPreferences.getString("Transmission", "");
     }
 
-    public static String getlastUpdated() {
-        return sharedPreferences.getString("lastUpdated", "");
+    public static String getCarModel_Name() {
+        return sharedPreferences.getString("carmodel_name", "");
     }
 
-    public static String getpfPulldate() {
-        return sharedPreferences.getString("pfPulldate", "");
+    public static String getOwnertype() {
+        return sharedPreferences.getString("OwnerType", "1");
     }
 
-    public static String getlatestPfContribution() {
-        return sharedPreferences.getString("latestPfContribution", "");
+    public static String getkm() {
+        return sharedPreferences.getString("KM", "100000");
     }
 
-    public static String getemployerContributionLatest() {
-        return sharedPreferences.getString("employerContributionLatest", "");
-    }
-
-    public static String getStatusMsg() {
-        return sharedPreferences.getString("StatusMsg", "");
-    }
-
-    public static String getpensionShareLatest() {
-        return sharedPreferences.getString("pensionShareLatest", "");
-    }
-
-    public static String getemployeeContribution() {
-        return sharedPreferences.getString("employeeContribution", "");
-    }
-
-    public static String getlatestDepositDate() {
-        return sharedPreferences.getString("latestDepositDate", "");
-    }
-
-    public static String getcompanyName() {
-        return sharedPreferences.getString("companyName", "");
-    }
-
-    public static String getnsdlRetryEnabled() {
-        return sharedPreferences.getString("nsdlRetryEnabled", "");
-    }
-
-    public static String getpanStatus() {
-        return sharedPreferences.getString("panStatus", "");
-    }
 
     public static String getFather() {
         return sharedPreferences.getString("father", "");
@@ -183,60 +160,5 @@ public class SharePrefs {
         return sharedPreferences.getBoolean("login", false);
     }
 
-    public static boolean getIsProcess2Done() {
-        return sharedPreferences.getBoolean("isProcess2Done", false);
-    }
 
-    public static boolean getIsProcess3Done() {
-        return sharedPreferences.getBoolean("isProcess3Done", false);
-    }
-
-    public static Bitmap getSelfie() {
-        byte[] decode = Base64.decode(sharedPreferences.getString("selfie", ""), Base64.NO_PADDING | Base64.URL_SAFE | Base64.NO_WRAP);
-        return BitmapFactory.decodeByteArray(decode, 0, decode.length);
-    }
-
-    public static boolean getIntro() {
-        return sharedPreferences.getBoolean("intro", false);
-    }
-
-
-    public static boolean getLanguage() {
-        return sharedPreferences.getBoolean("Language", false);
-    }
-
-
-    public static boolean getPanCheck() {
-        return sharedPreferences.getBoolean("pancheck", false);
-    }
-
-    public static String getCountryLang() {
-        return sharedPreferences.getString("CountryLang", "");
-    }
-
-    public static int getLangPos() {
-        return sharedPreferences.getInt("LangPos", 1);
-    }
-
-
-    public static boolean getPermission() {
-        return sharedPreferences.getBoolean("Permission", false);
-    }
-
-    public static String getpriorityTag() {
-        return sharedPreferences.getString("Tag", "google");
-
-
-    }
-
-    public static String getprivacyPolicy() {
-        return sharedPreferences.getString("Policy", "www.google.com");
-    }
-
-
-    public static int getclick() {
-        return sharedPreferences.getInt("click", 1);
-
-
-    }
 }

@@ -65,6 +65,8 @@ public class CarModelAdapter extends RecyclerView.Adapter<CarModelAdapter.ViewHo
             holder.ll_model.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_theme));
             holder.tv_make_name.setTextColor(activity.getResources().getColor(R.color.white));
             SharePrefs.editor("carmodel_ID", item.getModelId());
+            SharePrefs.editor("carmodel_name", item.getModelName());
+            SharePrefs.update();
             return;
         }
         holder.ll_model.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_null));

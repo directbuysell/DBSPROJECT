@@ -16,5 +16,5 @@ dependencyResolutionManagement {
         jcenter()
     }
 }
-rootProject.name = "OLXPROJECT"
+rootProject.name = "DBSPROJECT"
 include ':app'

@@ -83,6 +83,12 @@ public class GlobalAcesss extends MultiDexApplication {
 
 
 
+    public static String DecimalintformatAmount(int s) {
+        double amount = Double.parseDouble(String.valueOf(s));
+        NumberFormat numberFormat = NumberFormat.getInstance(new Locale("en", "IN"));
+        return numberFormat.format(amount);
+    }
+
 
 
 

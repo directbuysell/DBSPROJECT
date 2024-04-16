@@ -51,9 +51,7 @@ public class Fragmentmodel extends Fragment {
     CarModelAdapter adapter;
     EditText et_modelKeyword;
 
-    List<CarModel.DataItem> carmodel_Items ;
-
-
+    List<CarModel.DataItem> carmodel_Items;
 
 
     @Override
@@ -64,7 +62,7 @@ public class Fragmentmodel extends Fragment {
 
 
         rv_model = (RecyclerView) rootView.findViewById(R.id.rv_model);
-        et_modelKeyword = (EditText)rootView.findViewById(R.id.et_modelKeyword);
+        et_modelKeyword = (EditText) rootView.findViewById(R.id.et_modelKeyword);
 
         SearchCarModel(getActivity());
         et_modelKeyword.addTextChangedListener(new TextWatcher() {
@@ -87,17 +85,16 @@ public class Fragmentmodel extends Fragment {
         });
 
 
-
         return rootView;
     }
 
     private void SearchCarModel(FragmentActivity activity) {
 
-        Log.e("====NUmber",""+SharePrefs.getcarbrand()+"======>"+SharePrefs.getRegistrationyear());
+        Log.e("====NUmber", "" + SharePrefs.getcarbrand() + "======>" + SharePrefs.getRegistrationyear());
 
         Methods.progressDialogShow(activity);
 
-        Call<CarModel> call = apiInterface.searchcarModel(SharePrefs.getcarbrand(),SharePrefs.getRegistrationyear());
+        Call<CarModel> call = apiInterface.searchcarModel(SharePrefs.getcarbrand(), SharePrefs.getRegistrationyear());
         call.enqueue(new Callback<CarModel>() {
             @Override
             public void onResponse(Call<CarModel> call, Response<CarModel> response) {
@@ -116,26 +113,15 @@ public class Fragmentmodel extends Fragment {
                         for (CarModel.DataItem dataItem : dataItems) {
                             Log.e("======@@City3", "" + dataItems);
                             carmodel_Items.add(new CarModel.DataItem(dataItem.getModelId(), dataItem.getModelName()));
-//                            pincodedate.add(new PincodeModel.DataItem(dataItem.getPincode(), dataItem.getAreaId(), dataItem.getAreaName()));
                             Methods.progressDialogDismiss();
                         }
 
-
-
-
-//                        for (CarModel.DataItem dataItem : carmodel_Items) {
-//                            Log.e("======@@City3",""+carmodel_Items.size());
-//                            carmodel_Items.add(new CarModel.DataItem(dataItem.getModelId(), dataItem.getModelName()));
-//
-//                        }
 
                         rv_model.setHasFixedSize(true);
                         rv_model.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, true));
                         adapter = new CarModelAdapter(activity, carmodel_Items);
                         rv_model.setAdapter(adapter);
                         Methods.progressDialogDismiss();
-
-
 
 
                     }

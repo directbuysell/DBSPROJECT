@@ -2,8 +2,12 @@ package com.rto.vehicle.info.challan.fuel.olxproject.API;
 
 import com.rto.vehicle.info.challan.fuel.olxproject.model.CityModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.MonthsModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.AlternateModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.BrandModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.CarModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.ColourModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.FuleModel;
+import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.PriceRangeModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.Other.VariantModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.OwnersModel;
 import com.rto.vehicle.info.challan.fuel.olxproject.model.PincodeModel;
@@ -41,6 +45,18 @@ public interface APIInterface {
 
     @GET("/api/CarConfig/versions")
     Call<VariantModel> searchVariantModel(@Query("ModelId") int i, @Query("Year") int query);
+
+    @GET("/api/CarConfig/fuel-selection")
+    Call<FuleModel> searchfuel();
+
+    @GET("/api/CarConfig/alternate-fuel")
+    Call<AlternateModel> searchalternate_fuel();
+
+    @GET("/api/CarConfig/colors")
+    Call<ColourModel> searchColourType(@Query("VersionId") int query);
+
+    @GET("/api/CarConfig/price-range")
+    Call<PriceRangeModel> searchPriceRange(@Query("CityId") int i1, @Query("ModelId") int i2, @Query("MakeId") int i3);
 
 
 }

@@ -3,13 +3,15 @@
     android:id="@+id/ll_mainlist"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/_5sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/_8sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -18,7 +20,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center_vertical"
             android:padding="5dp"
-            android:src="@drawable/icon_location" />
+            android:src="@drawable/icon_gas" />
 
 
         <LinearLayout
@@ -28,7 +30,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_modelname"
+                android:id="@+id/tv_fule"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
@@ -36,39 +38,14 @@
                 android:textColor="@color/text_color"
                 android:textSize="16dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_FuelType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Area Name"
-                    android:textColor="@color/text_color"
-                    android:textSize="12dp" />
-
-
-                <TextView
-                    android:id="@+id/tv_Type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/_15dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Area Name"
-                    android:textColor="@color/text_color"
-                    android:textSize="12dp" />
-
-            </LinearLayout>
-
 
         </LinearLayout>
+
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:layout_marginTop="@dimen/_5sdp"
         android:background="@color/cardbg" />
 </LinearLayout>
