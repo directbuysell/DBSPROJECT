@@ -114,6 +114,18 @@
                 android:layout_height="@dimen/_50sdp"
                 android:padding="2dp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button"
+            android:text="Next"
+            android:layout_marginTop="@dimen/_16dp"
+            android:textSize="@dimen/_16dp"
+            android:backgroundTint="@color/md_orange_A400"/>
+
+
     </LinearLayout>
 
 </FrameLayout>

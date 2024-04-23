@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:508644012384:android:00dc944c71d5612014ae05",
         "android_client_info": {
-          "package_name": "com.rto.vehicle.info.challan.fuel.olxproject"
+          "package_name": "com.rto.vehicle.info.challan.fuel.dbsproject"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "508644012384-qlcle7e0odmrh1uu8ab9q4p9goo6um6s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.rto.vehicle.info.challan.fuel.olxproject",
+            "package_name": "com.rto.vehicle.info.challan.fuel.dbsproject",
             "certificate_hash": "4a6982f5be9dd308dbb3d9f4e31300e274a5ad0b"
           }
         },

@@ -41,7 +41,7 @@
                 android:textSize="13dp" />
 
 
-            <com.rto.vehicle.info.challan.fuel.olxproject.comman.AspectRatioLayout
+            <com.rto.vehicle.info.challan.fuel.dbsproject.comman.AspectRatioLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_bg"
@@ -80,7 +80,7 @@
                     android:layout_height="match_parent"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground" />
-            </com.rto.vehicle.info.challan.fuel.olxproject.comman.AspectRatioLayout>
+            </com.rto.vehicle.info.challan.fuel.dbsproject.comman.AspectRatioLayout>
 
 
             <TextView

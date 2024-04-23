@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.rto.vehicle.info.challan.fuel.olxproject'
+    namespace 'com.rto.vehicle.info.challan.fuel.dbsproject'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.rto.vehicle.info.challan.fuel.olxproject"
+        applicationId "com.rto.vehicle.info.challan.fuel.dbsproject"
         minSdk 24
         targetSdk 33
         versionCode 1

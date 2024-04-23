@@ -1,4 +1,4 @@
-package com.rto.vehicle.info.challan.fuel.olxproject;
+package com.rto.vehicle.info.challan.fuel.dbsproject;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.rto.vehicle.info.challan.fuel.olxproject", appContext.getPackageName());
+        assertEquals("com.rto.vehicle.info.challan.fuel.dbsproject", appContext.getPackageName());
     }
 }

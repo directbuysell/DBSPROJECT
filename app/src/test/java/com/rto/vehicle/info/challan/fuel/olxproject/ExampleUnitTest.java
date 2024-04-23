@@ -1,4 +1,4 @@
-package com.rto.vehicle.info.challan.fuel.olxproject;
+package com.rto.vehicle.info.challan.fuel.dbsproject;
 
 import org.junit.Test;
 

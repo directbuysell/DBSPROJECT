@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/_16dp"
         android:orientation="vertical">
 
@@ -72,39 +72,32 @@
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="Popular car brand"
-            android:textColor="@color/purple_200"
-            android:textSize="@dimen/_16dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_brand"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginTop="16dp" />
 
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/_16dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:fontFamily="@font/poppins_bold"-->
-<!--            android:text="Other car brand"-->
-<!--            android:textColor="@color/purple_200"-->
-<!--            android:textSize="@dimen/_16dp" />-->
+        <Button
+            android:id="@+id/Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Button"
+            android:text="Next"
+            android:layout_marginTop="@dimen/_16dp"
+            android:textSize="@dimen/_16dp"
+            android:backgroundTint="@color/md_orange_A400"/>
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/rv_other"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginTop="16dp" />-->
+        </LinearLayout>
+
 
 
     </LinearLayout>

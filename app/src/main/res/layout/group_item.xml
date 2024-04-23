@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Popular car brand"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/_16dp" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/makes_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
