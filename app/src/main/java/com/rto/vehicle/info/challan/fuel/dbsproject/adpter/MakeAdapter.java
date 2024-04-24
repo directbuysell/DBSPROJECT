@@ -53,16 +53,16 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
             }
         });
 
-     if (selectedPos == position) {
+        if (selectedPos == position) {
             holder.ll_brands.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_theme));
             holder.makeName.setTextColor(activity.getResources().getColor(R.color.white));
             SharePrefs.editor("carbrand", make.getCompId());
-         Toast.makeText(activity, "Clicked: " + make.getCompName(), Toast.LENGTH_SHORT).show();
+            SharePrefs.editor("carbrand_Name", make.getCompName());
+            Toast.makeText(activity, "Clicked: " + make.getCompName(), Toast.LENGTH_SHORT).show();
             return;
         }
-            holder.ll_brands.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_null));
-            holder.makeName.setTextColor(activity.getResources().getColor(R.color.text_gray));
-
+        holder.ll_brands.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_null));
+        holder.makeName.setTextColor(activity.getResources().getColor(R.color.text_gray));
 
 
     }

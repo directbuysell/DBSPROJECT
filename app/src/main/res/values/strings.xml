@@ -9,4 +9,20 @@
     <string name="next">Next</string>
 
 
+    <string name="txt_brand_name">Maker</string>
+    <string name="txt_model_name">Model Name</string>
+    <string name="txt_variant">Variant</string>
+    <string name="txt_year">Year</string>
+    <string name="txt_expected_value">Expected Value</string>
+    <string name="txt_vehicle_condition">Vehicle Condition</string>
+    <string name="txt_fair">FAIR</string>
+    <string name="txt_good">GOOD</string>
+    <string name="txt_very_good">VERY GOOD</string>
+    <string name="txt_excellent">EXCELLENT</string>
+    <string name="txt_price_disclaimer">** Price is calculated using extensive research, in-depth dealer relationships and advanced price indexing tools. The actual price of the vehicle may vary based on actual condition of the vehicle and several other parameters. We will not be held responsible for any losses incurred or liabilities arising by the party relying on this report.</string>
+    <string name="activity_resale_value_result">Resale Value Result</string>
+    <string name="format_kms_driven">%1$s Kms</string>
+    <string name="txt_km_driven">Kms Driven</string>
+
+
 </resources>

@@ -57,10 +57,11 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
     </style>
 
 
-    <style name="Spinner" parent="@android:style/Widget.Spinner">
+    <style name="Spinner" parent="@style/Widget.AppCompat.Spinner.DropDown">
         <item name="android:background">@drawable/edittext_bg</item>
         <item name="android:padding">12dp</item>
         <item name="android:popupBackground">@color/white</item>
