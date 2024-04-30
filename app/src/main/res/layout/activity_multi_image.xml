@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Seller.Uploadcar_coverimage_Activity">
+    tools:context=".Seller.Multi_Image_Activity">
 
     <include layout="@layout/toolbar" />
 
@@ -42,6 +42,7 @@
 
 
             <com.rto.vehicle.info.challan.fuel.dbsproject.comman.AspectRatioLayout
+                android:id="@+id/asp_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_bg"
@@ -70,7 +71,7 @@
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
-                        android:text="Add cover photo from gallery"
+                        android:text="Add car image from gallery &amp; camera"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
 
@@ -83,6 +84,12 @@
             </com.rto.vehicle.info.challan.fuel.dbsproject.comman.AspectRatioLayout>
 
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:padding="8dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -97,13 +104,13 @@
 
 
             <Button
-                android:id="@+id/btn_next"
+                android:id="@+id/btn_done"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:text="NEXT" />
+                android:text="Done" />
 
 
             <LinearLayout
@@ -205,9 +212,6 @@
 
 
             </LinearLayout>
-
-
-
 
 
         </LinearLayout>

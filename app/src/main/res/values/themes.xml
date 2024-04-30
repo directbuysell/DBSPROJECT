@@ -68,6 +68,12 @@
         <item name="android:spinnerMode">dropdown</item>
     </style>
 
+    <style name="Toolbar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
 
 

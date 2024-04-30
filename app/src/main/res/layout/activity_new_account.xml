@@ -17,13 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:gravity="center"
                 android:orientation="vertical">
-
 
 
                 <TextView
@@ -34,8 +34,6 @@
                     android:text="Create a new\naccount"
                     android:textColor="@color/purple_200"
                     android:textSize="30dp" />
-
-
 
 
             </LinearLayout>
@@ -63,6 +61,30 @@
 
                     <EditText
                         android:id="@+id/etFirstName"
+                        style="@style/EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Last Name"
+                        android:textColor="@color/text_gray" />
+
+                    <EditText
+                        android:id="@+id/etLastName"
                         style="@style/EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -134,14 +156,13 @@
                         android:textColor="@color/text_gray" />
 
                     <EditText
-                        android:id="@+id/etLastName"
+                        android:id="@+id/etpassword"
                         style="@style/EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:inputType="textPersonName" />
                 </LinearLayout>
-
 
 
                 <Button
@@ -184,7 +205,6 @@
                 </LinearLayout>
 
 
-
                 <TextView
                     android:id="@+id/tvPrivacy"
                     android:layout_width="match_parent"
@@ -196,8 +216,6 @@
                     android:textColor="@color/black"
                     android:textColorLink="@color/red"
                     android:textSize="12sp" />
-
-
 
 
                 <LinearLayout
@@ -216,9 +234,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center|end"
-                        android:layout_marginHorizontal="15dp"
                         android:text="Or sign up with"
                         android:textColor="@color/purple_200"
                         android:textSize="13dp" />
@@ -234,7 +252,6 @@
                 </LinearLayout>
 
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
@@ -243,12 +260,12 @@
 
                     <LinearLayout
                         android:id="@+id/ll_mobilelogin"
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="@dimen/_5sdp"
-                        android:gravity="center"
-                        android:background="@drawable/ic_box">
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_box"
+                        android:gravity="center">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -262,10 +279,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
                             android:fontFamily="@font/poppins_bold"
                             android:gravity="center|end"
                             android:text="Mobile Login "
-                            android:layout_marginLeft="8dp"
                             android:textColor="@color/purple_200"
                             android:textSize="13dp" />
 
@@ -275,12 +292,12 @@
 
                     <LinearLayout
                         android:id="@+id/ll_googlelogin"
-                        android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:background="@drawable/ic_box">
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_box"
+                        android:gravity="center">
 
                         <ImageView
                             android:layout_width="25dp"
@@ -294,10 +311,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
                             android:fontFamily="@font/poppins_bold"
                             android:gravity="center|end"
                             android:text="Google Login "
-                            android:layout_marginLeft="8dp"
                             android:textColor="@color/purple_200"
                             android:textSize="13dp" />
 
@@ -306,10 +323,6 @@
 
 
                 </LinearLayout>
-
-
-
-
 
 
             </LinearLayout>

@@ -58,7 +58,7 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
             holder.makeName.setTextColor(activity.getResources().getColor(R.color.white));
             SharePrefs.editor("carbrand", make.getCompId());
             SharePrefs.editor("carbrand_Name", make.getCompName());
-            Toast.makeText(activity, "Clicked: " + make.getCompName(), Toast.LENGTH_SHORT).show();
+
             return;
         }
         holder.ll_brands.setBackground(activity.getResources().getDrawable(R.drawable.ic_box_null));

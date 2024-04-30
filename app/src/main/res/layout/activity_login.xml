@@ -58,11 +58,11 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Mobile Number"
+                android:text="Email &amp; Mobile Number"
                 android:textColor="@color/text_gray" />
 
             <EditText
-                android:id="@+id/etFirstName"
+                android:id="@+id/et_email"
                 style="@style/EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:textColor="@color/text_gray" />
 
             <EditText
-                android:id="@+id/etLastName"
+                android:id="@+id/et_password"
                 style="@style/EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

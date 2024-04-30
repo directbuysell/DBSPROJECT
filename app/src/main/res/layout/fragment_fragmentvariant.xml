@@ -93,8 +93,10 @@
 
 
         <LinearLayout
+            android:id="@+id/ll_colour"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/_16dp"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
